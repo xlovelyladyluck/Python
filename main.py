@@ -1,23 +1,26 @@
 """
-Program: camper_age_input.py
+Program: main.py
 Author: Taylor Wilkens
-Last date modified: 09/07/2020
+Last date modified: 09/13/2020
 
 
 
-The purpose of this program is to accept user input for infant camper age,
-convert to the age in months to years via a function call then print the
-result.
+The purpose of this program is to accept 3 test scores, record a students name,
+and output the average of the input test scores
 """
-from Main import camper_age_input
-from Main.camper_age_input import convert_to_months
 
-value = int(input("Please provide the infant's age."))
-age_in_years = float(value)
-MONTHS = 12
-result = convert_to_months(age_in_years, MONTHS)
+from format_output.average_scores import average
 
-print(str(age_in_years)+" years is "+str(result)+" months old.")
+first_name1 = str(input("Please enter your first name."))
+last_name1 = str(input("Please enter your last name."))
+score1 = float(input("Please enter your first test score"))
+score2 = float(input("Please enter your second test score"))
+score3 = float(input("Please enter your final test score"))
 
-#I expected this program to run as a normal, but there is something wrong with the logic and the testing will not
-#connect to my function I am writing. The program does run and accept input, but the function's logic is not correct.
+average_score = average(score1, score2, score3)
+
+print(last_name1+ ", "+first_name1+" Average test score: "+str(average_score))
+
+### I felt more confident with this project, and I feel like the debugging is getting easier
+### as I understand how the operations should work as well as what the data types need to be
+### and how the functions need to interact between the file tabs.
