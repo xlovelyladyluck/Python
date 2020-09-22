@@ -19,10 +19,10 @@ class test_price(unittest.TestCase):
         self.assertAlmostEqual(coupon_calculations.calculate_price(45, 10,20))
         self.assertAlmostEqual(coupon_calculations.calculate_price(50, 5, 15))
         self.assertAlmostEqual(coupon_calculations.calculate_price(36, 5, 10))
-
-
-
-
+    def test_over_50(self):
+        self.assertAlmostEqual(coupon_calculations.calculate_price(55, 5, 20))
+        self.assertAlmostEqual(coupon_calculations.calculate_price(90, 5, 10))
+        self.assertAlmostEqual(coupon_calculations.calculate_price(89, 10, 15))
 
 
 
